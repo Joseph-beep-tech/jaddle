@@ -8,12 +8,12 @@ import java.util.List;
 public interface RestaurantDAO {
     //create
     void add (Restaurant restaurant);
-    // void addRestaurantToFoodType(Restaurant restaurant, Foodtype foodtype)
+    // void addRestaurantToFoodType(Restaurant restaurant, FoodType foodType)
 
     //read
     List<Restaurant> getAll();
     Restaurant findById(int id);
-    // List<Foodtype> getAllFoodtypesForARestaurant(int restaurantId);
+    // List<FoodType> getAllFoodTypesForARestaurant(int restaurantId);
 
     //update
     void update(int id, String name, String address, String zipcode, String phone, String website, String email);

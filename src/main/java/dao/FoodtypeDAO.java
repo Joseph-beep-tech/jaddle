@@ -9,11 +9,11 @@ public interface FoodtypeDAO {
     //create
     void add(FoodType foodtype);
 
-    //void addFoodtypeToRestaurant(Foodtype foodtype, Restaurant restaurant);
+    //void addFoodTypeToRestaurant(FoodType foodType, Restaurant restaurant);
 
     //read
     List<FoodType> getAll();
-    // List<Restaurant> getAllRestaurantsForAFoodtype(int id);
+    // List<Restaurant> getAllRestaurantsForAFoodType(int id);
 
     //update
     //omit for now
