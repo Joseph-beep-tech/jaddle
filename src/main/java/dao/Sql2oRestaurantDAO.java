@@ -1,11 +1,13 @@
 
 package dao;
 
+import models.FoodType;
 import models.Restaurant;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Sql2oRestaurantDAO implements RestaurantDAO { //don't forget to shake hands with your interface!
@@ -29,6 +31,12 @@ public class Sql2oRestaurantDAO implements RestaurantDAO { //don't forget to sha
     }
 
     @Override
+    public void addRestaurantToFoodType(Restaurant restaurant, FoodType foodType) {
+
+    }
+
+
+    @Override
     public List<Restaurant> getAll() {
         try (Connection con = sql2o.open()) {
             return con.createQuery("SELECT * FROM restaurants")
@@ -43,6 +51,11 @@ public class Sql2oRestaurantDAO implements RestaurantDAO { //don't forget to sha
                     .addParameter("id", id)
                     .executeAndFetchFirst(Restaurant.class);
         }
+    }
+
+    @Override
+    public List<FoodType> getAllFoodTypesForARestaurant(int restaurantId) {
+        return null;
     }
 
     @Override
